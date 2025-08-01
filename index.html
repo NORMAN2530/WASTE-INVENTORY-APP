@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Waste Inventory Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container" id="captureArea">
+    <div class="waste-type">
+      <p>🗑️ <strong>Waste Types:</strong> SW422 (Contaminated Rags) & SW104 (Sludge)</p>
+    </div>
+
+    <h1>Waste Inventory Calculator</h1>
+    <table id="wasteTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Gross Weight (kg)</th>
+          <th>Container Weight (kg)</th>
+          <th>Net Weight (kg)</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+
+    <div class="buttons">
+      <button onclick="addRow()">➕ Add Row</button>
+      <button onclick="saveAsImage()">📸 Save as Image</button>
+      <button onclick="exportPDF()">📄 Export as PDF</button>
+      <button onclick="resetStorage()">♻️ Reset Data</button>
+    </div>
+
+    <div class="totals">
+      <p><strong>Total Gross Weight:</strong> <span id="totalGross">0</span> kg</p>
+      <p><strong>Total Container Weight:</strong> <span id="totalContainer">0</span> kg</p>
+      <p><strong>Total Net Weight:</strong> <span id="totalNet">0</span> kg</p>
+    </div>
+
+    <footer>Created by Norman Azim</footer>
+  </div>
+
+  <div id="welcomePopup" class="popup">
+    <div class="popup-content">
+      <img src="https://cdn-icons-png.flaticon.com/512/3082/3082034.png" alt="Dustbin" width="100" />
+      <p>Welcome to the Waste Inventory Calculator!</p>
+      <button onclick="closePopup()">🚀 Start</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
