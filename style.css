@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #0d1b2a;
+  color: #ffffff;
+}
+
+.app-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+}
+
+.waste-type {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #90e0ef;
+}
+
+.waste-type select {
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+}
+
+table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  background-color: #1b263b;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #415a77;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+}
+
+.buttons {
+  margin-top: 10px;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #1e90ff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #4682b4;
+}
+
+.totals {
+  background-color: #1b263b;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #aaa;
+}
+
+/* Welcome popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.popup-content {
+  background-color: #1b263b;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+}
+
+.popup-content button {
+  margin-top: 15px;
+}
+
+/* Mobile scaling */
+@media screen and (max-width: 600px) {
+  .app-container {
+    padding: 10px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  input, button, select {
+    font-size: 14px;
+  }
+}
